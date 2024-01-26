@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Feedback Form</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-image:url('https://static.theprint.in/wp-content/uploads/2020/11/marriage.jpg');
+                background-size: cover;
+            }
+
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+            }   
+
+            h1 {
+            color: whitesmoke;
+            text-align: center;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                width: 700px;
+                margin: 0 auto;
+                background: #fff;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            }
+
+            .input-container, .radio-container,.textarea-container {
+                margin-bottom: 20px;
+            }
+
+            input[type="text"], input[type="email"], input[type="date"],textarea {
+                width: 100%;
+                padding: 8px auto 20px auto;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 16px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Feedback Form</h1>
+            <form id="survey-form" action="http://127.0.0.1:5500/website%20CSE326/feedbackthanks.html">
+                <div class="input-container">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="input-container">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-container">
+                    <label for="date">Date of Booking:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="textarea-container">
+                    <label for="comment">Share your experience with us:</label>
+                    <textarea id="comment" name="comment"></textarea>
+                </div>
+                <div class="radio-container">
+                    <p>Would you like to recommend us to a friend/family??</p>
+                    <input type="radio" id="yes">
+                    <label for="yes">YES</label>
+                    <input type="radio" id="no">
+                    <label for="no">NO</label>
+                    <input type="radio" id="maybe">
+                    <label for="maybe">MAYBE</label>
+                </div>
+                <div class="button-container">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
